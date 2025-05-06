@@ -49,9 +49,9 @@ export default function Home() {
         <section className="relative flex flex-col items-center justify-center px-4 py-24 md:py-32">
           <div className="max-w-xl md:max-w-4xl mx-auto">
             <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              모바일로 글쓰기가 불편해서
+            시간은 있는데, 모바일로는 이상하게 글이 안 써져요.
               <br />
-              <span className="font-semibold">아직도 집에서 글을 쓰며 시간을 낭비하시나요?</span>
+              <span className="font-semibold">결국 또 집에서 쓰고 있진 않으세요?</span>
             </p>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
               모바일에서도 키보드 하나로
