@@ -34,8 +34,8 @@ export default function ComparisonView() {
   /* ----------------------------- 이벤트 핸들러 ----------------------------- */
   const toggleTransparentView = () => {
     setShowTransparent((prev) => !prev);
-    trackEvent("comparison_toggle", {
-      view: !showTransparent ? "transparent" : "normal",
+    trackEvent("투명_키보드_전환", {
+      상태: !showTransparent ? "투명" : "일반",
     });
   };
 

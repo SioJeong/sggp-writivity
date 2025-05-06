@@ -7,6 +7,13 @@ import { trackEvent } from "@/lib/analytics";
 import { useState } from "react";
 import HeroAnimation from "@/components/hero-animation";
 
+const SUB_PRICE_LABEL = (
+  <>
+    <span className="text-gray-500 text-lg line-through">₩4,900 /월</span>
+    <span className="font-bold text-lg text-indigo-500">무료 체험 시작하기</span>
+  </>
+);
+
 export default function Home() {
   const [showEmailModal, setShowEmailModal] = useState(false);
   const [email, setEmail] = useState("");
@@ -23,7 +30,7 @@ export default function Home() {
       body: JSON.stringify({ email }),
     });
 
-    trackEvent("email_submitted", { location: "hero_modal" });
+    trackEvent("이메일_등록_완료", { 위치: "히어로_모달" });
     setIsSubmitting(false);
     setIsSubmitted(true);
 
@@ -34,8 +41,6 @@ export default function Home() {
       setEmail("");
     }, 3000);
   };
-
-  const SUB_PRICE_LABEL = "지금 월 4,900원으로 시작하기";
 
   return (
     <AnalyticsWrapper pageEvent="home_page_view">
@@ -65,7 +70,7 @@ export default function Home() {
               size="lg"
               className="rounded-full px-8 py-6 bg-white text-black hover:bg-gray-200 transition-all"
               onClick={() => {
-                trackEvent("hero_cta_click");
+                trackEvent("히어로_시작하기_클릭");
                 setShowEmailModal(true);
               }}
             >
@@ -142,7 +147,7 @@ export default function Home() {
                 <Button
                   className="mt-auto w-full rounded-xl py-6 bg-white text-black hover:bg-gray-200"
                   onClick={() => {
-                    trackEvent("problem_section_cta_click");
+                    trackEvent("문제점_시작하기_클릭");
                     setShowEmailModal(true);
                   }}
                 >
@@ -249,7 +254,7 @@ export default function Home() {
               Writivity 출시 알림 및 무료 체험 기회를 가장 먼저 받아보세요.
             </p>
             <Button
-              className="p-8 px-16 mb-4 w-xl rounded-full bg-white text-black text-lg hover:bg-gray-200"
+              className="p-8 px-16 mb-4 w-xl rounded-full bg-white text-black text-lg text-indigo-500 font-bold hover:bg-gray-200"
               onClick={() => setShowEmailModal(true)}
             >
               얼리 액세스 신청

@@ -15,7 +15,7 @@ export default function AnalyticsWrapper({ children, pageEvent }: AnalyticsWrapp
 
     // Track page load
     const onLoad = () => {
-      trackEvent("page_loaded")
+      trackEvent("페이지_로드_완료")
     }
 
     // Track scroll depth
@@ -27,22 +27,22 @@ export default function AnalyticsWrapper({ children, pageEvent }: AnalyticsWrapp
 
       if (scrollPercent > 0.25 && !window.scrollTracked25) {
         window.scrollTracked25 = true
-        trackEvent("scroll_depth", { depth: "25%" })
+        trackEvent("페이지_스크롤_깊이", { 깊이: "25%" })
       }
 
       if (scrollPercent > 0.5 && !window.scrollTracked50) {
         window.scrollTracked50 = true
-        trackEvent("scroll_depth", { depth: "50%" })
+        trackEvent("페이지_스크롤_깊이", { 깊이: "50%" })
       }
 
       if (scrollPercent > 0.75 && !window.scrollTracked75) {
         window.scrollTracked75 = true
-        trackEvent("scroll_depth", { depth: "75%" })
+        trackEvent("페이지_스크롤_깊이", { 깊이: "75%" })
       }
 
       if (scrollPercent > 0.9 && !window.scrollTracked90) {
         window.scrollTracked90 = true
-        trackEvent("scroll_depth", { depth: "90%" })
+        trackEvent("페이지_스크롤_깊이", { 깊이: "90%" })
       }
     }
 
