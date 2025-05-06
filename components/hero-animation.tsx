@@ -2,14 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Sparkles,
-  PencilLine,
-  Loader2,
-  Send,
-  Check,
-  ClipboardCheck,
-} from "lucide-react";
+import { Sparkles, PencilLine, Loader2, Send, Check } from "lucide-react";
 
 /**
  * HeroAnimation – Writivity → Blog UI 프로토타입 (v10)
@@ -98,7 +91,7 @@ export default function HeroAnimation() {
   /* ---------------------------- 렌더링 ---------------------------- */
   return (
     <div className="w-full flex justify-center pt-4 lg:pt-12 overflow-hidden">
-      <div className="relative w-full max-w-[380px] md:max-w-[460px] lg:max-w-[520px] xl:max-w-[600px] aspect-[9/12] overflow-hidden">
+      <div className="relative w-full max-w-[380px] md:max-w-[460px] aspect-[9/12] overflow-hidden">
         {/* Blog UI – 뒤 레이어 */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -230,7 +223,7 @@ export default function HeroAnimation() {
           {/* 프롬프트 입력 바 */}
           <div className="h-[20%] flex items-center px-3 border-t border-zinc-200 bg-zinc-50 text-xs md:text-sm lg:text-base text-zinc-700 relative">
             <PencilLine className="h-4 w-4 md:h-5 md:w-5 text-zinc-500 mr-2" />
-            <span className="flex-1 truncate">
+            <span className="flex-1">
               {phase === "typing"
                 ? typingVisible
                 : phase === "insert"

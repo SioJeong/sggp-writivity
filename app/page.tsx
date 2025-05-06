@@ -35,28 +35,28 @@ export default function Home() {
     }, 3000);
   };
 
-  const SUB_PRICE_LABEL = "월 4,900원에 구독하기";
+  const SUB_PRICE_LABEL = "지금 월 4,900원으로 시작하기";
 
   return (
     <AnalyticsWrapper pageEvent="home_page_view">
       <main className="flex min-h-screen flex-col bg-black text-white">
         {/* Hero Section */}
         <section className="relative flex flex-col items-center justify-center px-4 py-24 md:py-32">
-          <div className="max-w-xl mx-auto">
+          <div className="max-w-xl md:max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              모바일 키보드 하나로
+              모바일에서도 키보드 하나로
               <br />
-              긴 글 완성
+              완성도 높은 긴 글 작성
               <br />
               <br />
-              <span className="block mx-auto text-6xl md:text-8xl lg:text-9xl font-extrabold bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 bg-clip-text text-transparent drop-shadow-[0_0_2px_rgba(255,255,255,0.6)]">
+              <span className="block mx-auto text-6xl md:text-8xl font-extrabold bg-gradient-to-r from-zinc-200 via-zinc-400 to-zinc-200 bg-clip-text text-transparent">
                 Writivity
               </span>
               <br />
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              아이디어가 스쳐 지나가는 그 순간, 손을 떼지 않고 바로 글로
-              확장하세요.
+              순간의 영감을 놓치지 마세요. 앱 전환 없이 생각을 바로 글로
+              발전시키세요.
               <br />
               Writivity의 <strong>AI Writing Engine</strong>이 초안을 작성하고,
               문장 구조를 다듬고, 당신의 고유한 톤까지 반영합니다.
@@ -72,7 +72,7 @@ export default function Home() {
               {SUB_PRICE_LABEL} <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
-          <div className="mt-12 w-full max-w-3xl">
+          <div className="mt-12 w-full max-w-2xl">
             <HeroAnimation />
           </div>
         </section>
@@ -81,9 +81,9 @@ export default function Home() {
         <section className="py-20 px-4 bg-zinc-900">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">
-              모바일에서 긴 글 작성이 번거로운 이유,
+              모바일에서 긴 글 작성의 번거로움,
               <br />
-              우리 모두 느끼고 있죠?
+              이제 끝냅니다
             </h2>
             {/* <ComparisonView /> */}
             <div className="mt-12 grid md:grid-cols-2 gap-8">
@@ -92,9 +92,9 @@ export default function Home() {
                   기존 키보드의 한계
                 </h3>
                 <p className="text-gray-300 mb-6">
-                  블로그·뉴스레터·SNS용 장문을 작성하려면 메모 앱에 아이디어를
-                  적고, AI 도구를 번갈아 열고, 다시 복사·붙여넣기 하셨나요?
-                  흐름이 끊기고 창작 몰입도는 바닥을 칩니다.
+                  블로그나 SNS 글 작성 시 여러 앱을 번갈아 사용하느라 창작
+                  흐름이 끊기시나요? 메모장, AI 도구, 복사-붙여넣기 과정은 창작
+                  몰입도를 떨어뜨립니다.
                 </p>
                 <ul className="space-y-3">
                   {[
@@ -117,11 +117,28 @@ export default function Home() {
                   Writivity의 해결책
                 </h3>
                 <p className="text-gray-300 mb-6">
-                  Writivity 키보드 위에 탑재된 AI는 타이핑과 동시에 문장을
-                  확장하고, 문맥을 분석해 어색한 표현을 교정하며, 문단 구조를
-                  자동으로 정리합니다. 별도 앱 전환 없이, 하나의 입력창에서
-                  완결형 글쓰기를 경험하세요.
+                  Writivity의 AI 키보드는 타이핑과 동시에:
                 </p>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-center">
+                    <span className="bg-zinc-700 p-1 rounded-full mr-3">
+                      <Type className="h-4 w-4" />
+                    </span>
+                    <span>문장을 자동으로 확장하고</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="bg-zinc-700 p-1 rounded-full mr-3">
+                      <Eye className="h-4 w-4" />
+                    </span>
+                    <span>어색한 표현을 실시간 교정하며</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="bg-zinc-700 p-1 rounded-full mr-3">
+                      <Smartphone className="h-4 w-4" />
+                    </span>
+                    <span>문단 구조를 자동으로 정리합니다</span>
+                  </li>
+                </ul>
                 <Button
                   className="mt-auto w-full rounded-xl py-6 bg-white text-black hover:bg-gray-200"
                   onClick={() => {
@@ -141,9 +158,9 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                문장 생성부터 교정·개인화까지,
+                하나의 키보드로 완성하는 글쓰기의 모든 것
                 <br />
-                모두 키보드 안에서 해결
+                생성부터 교정까지
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Writivity의 AI는 타이핑과 동시에 초안을 확장하고, 문맥을 고려해

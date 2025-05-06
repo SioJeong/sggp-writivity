@@ -1,9 +1,6 @@
 interface Window {
-  mixpanel?: {
-    track: (event: string, properties?: Record<string, any>) => void
-    init: (token: string) => void
-  }
-  fbq?: (event: string, name: string, properties?: Record<string, any>) => void
+  gtag: (...args: any[]) => void
+  dataLayer: any[]
   scrollTracked25: boolean
   scrollTracked50: boolean
   scrollTracked75: boolean
