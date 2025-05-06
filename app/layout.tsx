@@ -23,12 +23,16 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         {/* Google Analytics 4 */}
         <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-0R0NE8E3HY`}
+        />
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-0R0NE8E3HY'); // Replace with your GA4 measurement ID
+              gtag('config', 'G-0R0NE8E3HY');
             `,
           }}
         />
