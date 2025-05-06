@@ -21,15 +21,15 @@ const aiFinalText =
   "푸른 하늘과 따뜻한 햇살이 어우러져 하루를 시작하는 에너지가 충전되는 느낌이었습니다.";
 
 /* ------------------------------ 타임라인 ------------------------------ */
-const LOOP_MS = 16000;
+const LOOP_MS = 12000;
 const PHASES = {
-  typing: { start: 0, end: 4000 },
-  press: { start: 4000, end: 6500 },
-  analyzing: { start: 6500, end: 8000 },
-  generating: { start: 8000, end: 11500 },
-  done: { start: 11500, end: 12500 },
-  copy: { start: 12500, end: 13500 },
-  insert: { start: 13500, end: 16000 },
+  typing: { start: 0, end: 3000 },
+  press: { start: 3000, end: 5000 },
+  analyzing: { start: 5000, end: 6000 },
+  generating: { start: 6000, end: 8500 },
+  done: { start: 8500, end: 9500 },
+  copy: { start: 9500, end: 10500 },
+  insert: { start: 10500, end: 12000 },
 } as const;
 
 type Phase = keyof typeof PHASES;
@@ -96,7 +96,7 @@ export default function HeroAnimation() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: isSlideOut ? 1 : 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
           className="absolute inset-0 bg-zinc-50 rounded-3xl shadow-inner overflow-hidden flex flex-col"
         >
           {/* 블로그 헤더 */}
@@ -141,7 +141,7 @@ export default function HeroAnimation() {
         {/* Writivity 레이어 – 앞 */}
         <motion.div
           animate={{ y: isSlideOut ? "110%" : 0 }}
-          transition={{ type: "spring", stiffness: 140, damping: 20 }}
+          transition={{ type: "spring", stiffness: 180, damping: 15 }}
           className="absolute inset-0 bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col"
         >
           {/* 헤더 */}
@@ -234,7 +234,7 @@ export default function HeroAnimation() {
               className={`ml-2 bg-indigo-500 text-white rounded-full ${btnSize}`}
               initial={false}
               animate={phase === "press" ? { scale: 0.85 } : { scale: 1 }}
-              transition={{ type: "spring", stiffness: 300, damping: 15 }}
+              transition={{ type: "spring", stiffness: 400, damping: 12 }}
             >
               <Send className="h-4 w-4 md:h-5 md:w-5" />
             </motion.button>
