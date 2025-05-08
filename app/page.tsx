@@ -9,8 +9,8 @@ import HeroAnimation from "@/components/hero-animation";
 
 const SUB_PRICE_LABEL = (
   <>
-    <span className="text-gray-500 text-lg line-through">₩4,900 /월</span>
-    <span className="font-bold text-lg text-indigo-500">무료 체험 시작하기</span>
+    <span className="text-gray-500 text-base md:text-lg line-through">₩4,900/월</span>
+    <span className="font-bold text-base md:text-lg text-indigo-500">무료 체험 시작하기</span>
   </>
 );
 
@@ -48,12 +48,12 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative flex flex-col items-center justify-center px-4 py-24 md:py-32">
           <div className="max-w-xl md:max-w-4xl mx-auto">
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
+            <p className="text-base md:text-2xl text-gray-300 mb-8">
             시간은 있는데, 모바일로는 이상하게 글이 안 써져요.
               <br />
               <span className="font-semibold">결국 또 집에서 쓰고 있진 않으세요?</span>
             </p>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
+            <h1 className="text-3xl md:text-6xl font-bold tracking-tight mb-6">
               모바일에서도 키보드 하나로
               <br />
               완성도 높은 긴 글 작성
@@ -64,23 +64,25 @@ export default function Home() {
               </span>
               <br />
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-base md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
               순간의 영감을 놓치지 마세요. 앱 전환 없이 생각을 바로 글로
               발전시키세요.
               <br />
-              Writivity의 <strong>AI Writing Engine</strong>이 초안을 작성하고,
+              Writivity의 <strong>AI Writing Engine</strong>이 초안을 작성하고,
               문장 구조를 다듬고, 당신의 고유한 톤까지 반영합니다.
             </p>
-            <Button
-              size="lg"
-              className="rounded-full px-8 py-6 bg-white text-black hover:bg-gray-200 transition-all"
-              onClick={() => {
-                trackEvent("히어로_시작하기_클릭");
-                setShowEmailModal(true);
-              }}
-            >
-              {SUB_PRICE_LABEL} <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <div className="flex justify-center">
+              <Button
+                size="lg"
+                className="rounded-full px-8 py-6 bg-white text-black hover:bg-gray-200 transition-all w-full md:w-auto md:min-w-[300px]"
+                onClick={() => {
+                  trackEvent("히어로_시작하기_클릭");
+                  setShowEmailModal(true);
+                }}
+              >
+                {SUB_PRICE_LABEL} <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </div>
           </div>
           <div className="mt-12 w-full max-w-2xl">
             <HeroAnimation />
@@ -90,7 +92,7 @@ export default function Home() {
         {/* Problem Section */}
         <section className="py-20 px-4 bg-zinc-900">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">
+            <h2 className="text-2xl md:text-5xl font-bold mb-12 text-center">
               모바일에서 긴 글 작성의 번거로움,
               <br />
               이제 끝냅니다
@@ -167,12 +169,14 @@ export default function Home() {
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                하나의 키보드로 완성하는 글쓰기의 모든 것
+              <h2 className="text-2xl md:text-5xl font-bold mb-6">
+                하나의 키보드로 완성하는
+                <br />
+                글쓰기의 모든 것,
                 <br />
                 생성부터 교정까지
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-base md:text-xl text-gray-300 max-w-3xl mx-auto">
                 Writivity의 AI는 타이핑과 동시에 초안을 확장하고, 문맥을 고려해
                 오타와 어색한 표현을 고쳐주며, 사용자의 고유한 스타일을 학습해
                 점점 더 정교한 추천을 제공합니다.
@@ -220,7 +224,7 @@ export default function Home() {
         {/* Stats Section */}
         <section className="py-20 px-4 bg-zinc-900" id="stats">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">
+            <h2 className="text-2xl md:text-5xl font-bold mb-16 text-center">
               데이터로 확인한 생산성 향상
             </h2>
 
@@ -238,10 +242,10 @@ export default function Home() {
             </div>
 
             <div className="bg-zinc-800 p-8 md:p-12 rounded-2xl text-center">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6">
+              <h3 className="text-xl md:text-3xl font-bold mb-6">
                 Writivity로 콘텐츠 제작 효율 극대화
               </h3>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-base md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 단순 타이핑을 넘어, AI가 초안·교정을 모두 처리하여 창작자는 핵심
                 아이디어에만 집중할 수 있습니다.
               </p>
@@ -252,14 +256,14 @@ export default function Home() {
         {/* Final CTA */}
         <section className="py-24 px-4 text-center" id="early-access">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            <h2 className="text-2xl md:text-5xl font-bold mb-6">
               지금 신청하고 혜택을 받아보세요
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-base md:text-xl text-gray-300 mb-8">
               Writivity 출시 알림 및 무료 체험 기회를 가장 먼저 받아보세요.
             </p>
             <Button
-              className="p-8 px-16 mb-4 w-xl rounded-full bg-white text-black text-lg text-indigo-500 font-bold hover:bg-gray-200"
+              className="p-6 md:p-8 px-12 md:px-16 mb-4 w-full md:w-auto md:min-w-[300px] rounded-full bg-white text-black text-base md:text-lg text-indigo-500 font-bold hover:bg-gray-200"
               onClick={() => setShowEmailModal(true)}
             >
               얼리 액세스 신청
