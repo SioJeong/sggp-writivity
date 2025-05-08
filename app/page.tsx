@@ -49,7 +49,7 @@ export default function Home() {
         <section className="relative flex flex-col items-center justify-center px-4 py-24 md:py-32">
           <div className="max-w-xl md:max-w-4xl mx-auto">
             <p className="text-base md:text-2xl text-gray-300 mb-8">
-            시간은 있는데, 모바일로는 이상하게 글이 안 써져요.
+            시간은 있는데, 모바일로 게시글을 작성할 수 없을까...
               <br />
               <span className="font-semibold">결국 또 집에서 쓰고 있진 않으세요?</span>
             </p>
